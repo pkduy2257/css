@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaVault</title>
+    <style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+    body { display: flex; flex-direction: column; min-height: 100vh; background: #e4dfe0; }
+
+    /* Navigation */
+    nav {
+      display: flex; justify-content: center; gap: 2rem;
+      background: linear-gradient(90deg, #c6b6ff, #d8ef9a);
+      padding: 1rem 0; font-weight: bold;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      animation: rainbowHue 3.6s linear infinite;
+    }
+    nav a { text-decoration: none; color: #fff; transition: color 0.3s; }
+    nav a:hover { color: #6fb2ff; }
+
+    /* Header hero image + title */
+    .hero {
+      text-align: center; padding: 2rem 1rem;
+      animation: rainbowHue 3.6s linear infinite;
+    }
+    .hero img {
+      width: 150px; height: 150px; border-radius: 50%;
+      border: 5px solid #a3adff; object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hero img:hover {
+      transform: scale(1.1) rotate(3deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .hero h1 {
+      font-size: 2.5rem; color: #c6b6ff; margin-top: 1rem;
+    }
+
+    /* Content / Gallery */
+    .content {
+  max-width: fit-content;
+  margin: 6rem auto;
+
+  background: linear-gradient(to left, #e2eea2 5%, #f0fff6 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+    .gallery {
+  display: grid; /* must be grid to use grid-template-columns */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* responsive */
+  gap: 1rem;
+  justify-items: center; /* centers each image in its grid cell */
+}
+
+    .gallery img {
+  width: 95%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+    
+    .gallery img:hover {
+      transform: perspective(836px) rotateY(15deg) rotateX(10deg) scale(1.15) translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+      filter: brightness(0.8) drop-shadow(0 0 15px rgba(255,255,255,0.6));
+    }
+
+@keyframes rainbowHue {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+    /* Footer */
+    footer {
+      text-align: center; background: linear-gradient(90deg, #fae3d9, #c6b6ff);
+      padding: 1.5rem; color: #fff;
+      animation: rainbowHue 3.6s linear infinite;
+    }
+  </style>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Genres</a>
+      <a href="#">Library</a>
+      <a href="#">About</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="manga.jpeg" alt="Profile">
+      <h1>My Manga Vault</h1>
+    </section>
+
+    <!-- Manga Gallery -->
+    <section class="content">
+      <div class="gallery">
+        <img src="aot.jpg" alt="Attack on Titan">
+        <img src="bleach.jpg" alt="Bleach">
+        <img src="one piece.jpg" alt="One Piece">
+        <img src="onepunchman.jpg" alt="One Punch Man">
+        <img src="ao haru ride.jpg" alt="Ao Haru Ride">
+        <img src="berserk.jpg" alt="Berserk">
+        <img src="conan.jpg" alt="Detective Conan">
+        <img src="grandblue.jpg" alt="Grand Blue">
+        <img src="demon slayer.jpg" alt="Demon Slayer">
+        <img src="Doraemon.jpg" alt="Doraemon">
+        <img src="overlord.jpg" alt="Overlord">
+        <img src="yourname.jpg" alt="Your Name">
+        <img src="Jujutsu_kaisen.jpg" alt="Jujutsu Kaisen">
+        <img src="fairy tail.jpg" alt="Fairy Tail">
+        <img src="naruto.jpg" alt="Naruto">
+        <img src="slamdunk.jpg" alt="Slam Dunk">
+        <img src="vagabond.jpg" alt="Vagabond">
+        <img src="deathnote.jpg" alt="Death Note">
+        <img src="kagurabachi.jpg" alt="Kagurabachi">
+        <img src="mobpsycho.jpg" alt="Mob Psycho 100">
+        <img src="spyxfamily.jpg" alt="Spy x Family">
+        <img src="chainsawman.jpg" alt="Chainsaw Man">
+        <img src="tokyoghoul.jpg" alt="Tokyo Ghoul">
+        <img src="myheroacademia.jpg" alt="My Hero Academia">
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 MangaVault. All rights reserved.
+    </footer>
+
+  </body>
+</html>
